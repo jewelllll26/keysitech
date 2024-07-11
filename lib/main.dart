@@ -2,15 +2,17 @@ import 'package:keysitech/home.dart';
 import 'package:keysitech/pages/dashboard.dart';
 import 'package:keysitech/pages/menu.dart';
 import 'package:keysitech/pages/signup.dart';
+import 'package:keysitech/pages/login.dart';
 import 'package:flutter/material.dart';
 
 
 void main() => runApp(MaterialApp(
-  initialRoute: '/signup',
+  initialRoute: '/login',
   routes: {
     '/' :(context) => Dashboard(),
     '/menu' : (context) => Menu(),
     '/profile' : (context) => Home(),
     '/signup' : (context) => Signup(),
+    '/login' : (context) => Login(),
   },
 ));
