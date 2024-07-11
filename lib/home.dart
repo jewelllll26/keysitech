@@ -131,9 +131,16 @@ class _HomeState extends State<Home> {
                       year += 1;
                     });
                   },
-                  child: Text('Add Year'),
+                  child: Text(
+                    'Add Year',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 20.0,
+                    ),
+                  ),
                   style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(Colors.orange),
+                    backgroundColor: WidgetStateProperty.all(Colors.deepOrangeAccent),
                   ),
                 ),
               ],

@@ -1,13 +1,13 @@
-import 'package:keysitech/home.dart';
-import 'package:keysitech/pages/dashboard.dart';
-import 'package:keysitech/pages/menu.dart';
-import 'package:keysitech/pages/signup.dart';
-import 'package:keysitech/pages/login.dart';
+import 'package:mobile_appfront/home.dart';
+import 'package:mobile_appfront/pages/dashboard.dart';
+import 'package:mobile_appfront/pages/menu.dart';
+import 'package:mobile_appfront/pages/signup.dart';
+import 'package:mobile_appfront/pages/login.dart';
 import 'package:flutter/material.dart';
 
 
 void main() => runApp(MaterialApp(
-  initialRoute: '/login',
+  initialRoute: '/menu',
   routes: {
     '/' :(context) => Dashboard(),
     '/menu' : (context) => Menu(),
