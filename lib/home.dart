@@ -1,106 +1,139 @@
 import 'package:flutter/material.dart';
 
-class Home extends StatelessWidget {
+class Home extends StatefulWidget {
   const Home({super.key});
 
   @override
+  State<Home> createState() => _HomeState();
+}
+
+class _HomeState extends State<Home> {
+  int year = 0;
+
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       backgroundColor: Colors.white,
-      appBar:AppBar(
-        title:Text('User Profile'),
-        backgroundColor: Colors.deepOrangeAccent,
+      appBar: AppBar(
+        title: Text('User Profile'),
+        backgroundColor: Colors.deepOrange,
         centerTitle: true,
       ),
-      body:Padding(
-        padding: EdgeInsets.all(20.0),
+      body: Padding(
+        padding:  EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
+
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Center(
                   child: CircleAvatar(
                     child: Image.asset('assets/girl (2).png'),
-                    radius: 70.0,
+                    radius: 80.0,
                   ),
                 ),
                 Divider(
-                  height: 30.0,
+                  height: 50.0,
                   color: Colors.white,
-                  thickness: 15.0,
+                  thickness: 5.0,
                 ),
                 Row(
                   children: [
                     Icon(
-                      Icons.person_2,
-                      color: Colors.white,
+                      Icons.person_3,
+                      color: Colors.deepOrange,
+
                     ),
-                    SizedBox(width:30.0,),
+                    SizedBox(width: 3.0,),
                     Text(
-                      'NAME',
+                      'NAME:',
                       style: TextStyle(
                         fontSize: 16.0,
-                        color:Colors.white,
-                        letterSpacing:2.0,
+                        color: Colors.black,
+                        letterSpacing: 2.0,
+                      ),
+                    ),
+                  ],
+                ),
+
+                Text(
+                  'Jewerly Mariz C. Catapang',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: 25.0,
+                  ),
+
+                ),
+                SizedBox(height: 30.0,),
+                Row(
+                  children: [
+
+                    Icon(Icons.calendar_month,
+                      color: Colors.deepOrangeAccent,
+                    ),
+                    SizedBox(width: 3.0,),
+
+                    Text(
+                      'YEAR:',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.black,
+                        letterSpacing: 2.0,
+
                       ),
                     ),
                   ],
                 ),
                 Text(
-                  'Jewerly Mariz C. Catapang',
+                  '$year Year',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color:Colors.black,
-                      fontSize: 25.0
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: 25.0,
                   ),
                 ),
                 SizedBox(height: 30.0,),
-                Text(
-                  'YEAR',
-                  style: TextStyle(
-                      fontSize: 16.0,
-                      color:Colors.black,
-                      letterSpacing:2.0
-                  ),
-                ),
-                Text(
-                  'THIRD YEAR',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color:Colors.black,
-                      fontSize: 25.0
-                  ),
-                ),
-                SizedBox(height: 30.0,),
-                Text(
-                  'EMAIL',
-                  style: TextStyle(
-                      fontSize: 16.0,
-                      color:Colors.black,
-                      letterSpacing:2.0
-                  ),
+                Row(
+                  children: [
+                    Icon(Icons.email,
+                      color: Colors.deepOrangeAccent,
+                    ),
+                    SizedBox(width: 3.0,),
+                    Text(
+                      'EMAIL:',
+                      style: TextStyle(
+                        fontSize: 16.0,
+                        color: Colors.black,
+                        letterSpacing: 2.0,
+                      ),
+                    ),
+                  ],
                 ),
                 Text(
                   '21-76547@g.batstate-u.edu.ph',
                   style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color:Colors.black,
-                      fontSize: 25.0
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                    fontSize: 25.0,
                   ),
-                )
+                ),
               ],
             ),
-
             Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
                 ElevatedButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    setState(() {
+                      year += 1;
+                    });
+                  },
                   child: Text('Add Year'),
                   style: ButtonStyle(
-                      backgroundColor: WidgetStateProperty.all(Colors.orange)
+                    backgroundColor: WidgetStateProperty.all(Colors.orange),
                   ),
                 ),
               ],
@@ -108,6 +141,7 @@ class Home extends StatelessWidget {
           ],
         ),
       ),
+
     );
   }
 }
