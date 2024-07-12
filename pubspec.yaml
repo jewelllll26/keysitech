@@ -1,7 +1,6 @@
 name: mobile_appfront
-description: "kctech project"
-# The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
+description: "A new Flutter project."
+
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 
@@ -42,3 +41,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+    - assets/booksque.png
+    - assets/CITW.jpg
+    - assets/JONAXX.jpg
+    - assets/SSA.jpg
+    - assets/TRIE.jpg
+    - assets/AOFTD.jpg
+    - assets/HAHA.png
+    - assets/girl (2).png
+    - assets/wr.png
+    - assets/AAA.png
+

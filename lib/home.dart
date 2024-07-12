@@ -16,7 +16,7 @@ class _HomeState extends State<Home> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('User Profile'),
-        backgroundColor: Colors.deepOrange,
+        backgroundColor: Colors.orange,
         centerTitle: true,
       ),
       body: Padding(
@@ -30,8 +30,9 @@ class _HomeState extends State<Home> {
               children: <Widget>[
                 Center(
                   child: CircleAvatar(
-                    child: Image.asset('assets/girl (2).png'),
-                    radius: 80.0,
+                    backgroundImage: AssetImage('assets/girl (2).png'),
+                    backgroundColor: Colors.white,
+                    radius: 70.0,
                   ),
                 ),
                 Divider(
@@ -70,9 +71,8 @@ class _HomeState extends State<Home> {
                 SizedBox(height: 30.0,),
                 Row(
                   children: [
-
                     Icon(Icons.calendar_month,
-                      color: Colors.deepOrangeAccent,
+                      color: Colors.deepOrange,
                     ),
                     SizedBox(width: 3.0,),
 
@@ -99,7 +99,7 @@ class _HomeState extends State<Home> {
                 Row(
                   children: [
                     Icon(Icons.email,
-                      color: Colors.deepOrangeAccent,
+                      color: Colors.deepOrange,
                     ),
                     SizedBox(width: 3.0,),
                     Text(
@@ -113,7 +113,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
                 Text(
-                  '21-76547@g.batstate-u.edu.ph',
+                  '21-76457@g.batstate-u.edu.ph',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.black,
@@ -135,12 +135,12 @@ class _HomeState extends State<Home> {
                     'Add Year',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Colors.black,
                       fontSize: 20.0,
                     ),
                   ),
                   style: ButtonStyle(
-                    backgroundColor: WidgetStateProperty.all(Colors.deepOrangeAccent),
+                    backgroundColor: WidgetStateProperty.all(Colors.orange),
                   ),
                 ),
               ],
